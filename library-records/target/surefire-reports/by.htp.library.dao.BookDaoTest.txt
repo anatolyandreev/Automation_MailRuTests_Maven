@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: by.htp.library.dao.BookDaoTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.647 sec <<< FAILURE!
+testGetBookByTitle(by.htp.library.dao.BookDaoTest)  Time elapsed: 0.013 sec  <<< FAILURE!
+java.lang.AssertionError: The received count of books by title is not correct expected [2] but found [1]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:388)
+	at by.htp.library.dao.BookDaoTest.testGetBookByTitle(BookDaoTest.java:86)
+

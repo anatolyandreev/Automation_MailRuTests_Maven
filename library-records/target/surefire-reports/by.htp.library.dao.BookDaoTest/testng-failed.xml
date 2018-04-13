@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [by.htp.library.dao.BookDaoTest]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="by.htp.library.dao.BookDaoTest">
+        <methods>
+          <include name="closeDBConnection"/>
+          <include name="getExpectedList"/>
+          <include name="initDao"/>
+          <include name="testGetBookByTitle"/>
+          <include name="getExpectedBookByTitle"/>
+          <include name="cleanExpectedValues"/>
+          <include name="initDefaultDBConnection"/>
+        </methods>
+      </class> <!-- by.htp.library.dao.BookDaoTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [by.htp.library.dao.BookDaoTest] -->

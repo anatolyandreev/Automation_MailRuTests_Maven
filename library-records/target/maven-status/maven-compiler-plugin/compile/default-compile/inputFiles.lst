@@ -1,0 +1,10 @@
+C:\workspace\library-records\src\main\java\by\htp\library\bean\Book.java
+C:\workspace\library-records\src\main\java\by\htp\library\bean\Entity.java
+C:\workspace\library-records\src\main\java\by\htp\library\dao\BaseDao.java
+C:\workspace\library-records\src\main\java\by\htp\library\dao\impl\EmployeeDaoDBImpl.java
+C:\workspace\library-records\src\main\java\by\htp\library\dao\BookDao.java
+C:\workspace\library-records\src\main\java\by\htp\library\bean\Employee.java
+C:\workspace\library-records\src\main\java\by\htp\library\dao\EmployeeDao.java
+C:\workspace\library-records\src\main\java\by\htp\library\dao\impl\BookDaoDBImpl.java
+C:\workspace\library-records\src\main\java\by\htp\library\console\MainApp.java
+C:\workspace\library-records\src\main\java\by\htp\library\dao\util\DBConnectionHelper.java
