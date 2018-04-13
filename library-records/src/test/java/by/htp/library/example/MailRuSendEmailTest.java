@@ -32,6 +32,7 @@ public class MailRuSendEmailTest
 	private final static String senderEmail = "tathtp@mail.ru";
 	private final static String senderLogin = "tathtp";
 	private final static String senderPassword = "Klopik123";
+	private final static String allowedSenderEmail = "tathtp@mail.ru";
 
 	@BeforeMethod
 	public void loginToEmailBox() throws InterruptedException
@@ -63,21 +64,43 @@ public class MailRuSendEmailTest
 	{
 		openPage("http://mail.ru");
 		loginAsUser(targetLogin, targetPassword);
+
 		while (true)
 		{
 			waitForNewEmailAndOpen();
-			replySimply();
-			navigateToInbox();
+			if (isSenderEmailAllowed(allowedSenderEmail))
+			{
+				replySimply();
+				navigateToInbox();
+			}
+			else
+			{
+				navigateToInbox();
+			}
 		}
 	}
 
-	private void getSenderEmail()
+	private boolean isSenderEmailAllowed(String allowedSenderEmail)
 	{
-		
+		if (getSenderEmail().equals(allowedSenderEmail))
+		{
+			return true;
+		}
+		return false;
 	}
 
-	private void navigateToInbox()
+	private String getSenderEmail()
 	{
+		//span[@class='b-contact-informer-target js-contact-informer' and parent::*[@class='b-letter__head__addrs__from']]
+		String senderEmail = driver.findElement(
+				By.xpath("//span[@class='b-contact-informer-target js-contact-informer' and parent::*[@class='b-letter__head__addrs__from']]"))
+				.getAttribute("data-contact-informer-email");
+		return senderEmail;
+	}
+
+	private void navigateToInbox() throws InterruptedException
+	{
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//span[@class='b-nav__item__text b-nav__item__text_unread']")).click();
 		driver.switchTo().defaultContent();
 	}
