@@ -16,9 +16,7 @@ public class WaitsExample {
 
 		System.setProperty("webdriver.chrome.driver", "c:/driver/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		
-		driver.switchTo().frame(index);
-		
+
 		driver.manage().timeouts().pageLoadTimeout(10,TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.DAYS);
 		
